@@ -4,25 +4,32 @@ public class CollectStar : MonoBehaviour
 {
     //public AudioSource collectSound;
     public static int total;
+    string theObjectName = ""; 
 
-    void OnTriggerExit2D(Collider2D colliders)
+    void OnTriggerEnter2D(Collider2D colliders)
     {
-        //collectSound.Play();
+        if (theObjectName != gameObject.name)
+        {
+            //collectSound.Play();
+            if (gameObject.name.Equals("cherry"))
+            {
+                ScoringSystem.theScore += 5;
+                total += 5;
+            }
+            else if (gameObject.name.Equals("Big Diamond(Clone)"))
+            {
+                ScoringSystem.theScore += 50;
+                total += 50;
+            }
+            else
+            {
+                ScoringSystem.theScore += 1;
+                total += 1;
+            }
 
-        if (gameObject.name.Equals("cherry"))
-        {
-            ScoringSystem.theScore += 5;
-            total += 5;
+            theObjectName = gameObject.name;
         }
-        else if (gameObject.name.Equals("Big Diamond"))
-        {
-            ScoringSystem.theScore += 50;
-        }
-        else
-        {
-            ScoringSystem.theScore += 1;
-            total += 1;
-        }
+        
 
         while (ScoringSystem.theScore >= 10)
         {

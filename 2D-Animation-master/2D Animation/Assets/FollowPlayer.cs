@@ -17,5 +17,12 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
         }
+
+        //drop down die
+        if (player.position.y <= -20.0)
+        {
+            player.position = new Vector3(-1.9f, 1.0f, 0.0f);
+            ScoringSystem.thelife -= 1;
+        }
     }
 }

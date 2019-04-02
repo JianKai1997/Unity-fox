@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class TileMovement : MonoBehaviour
 {
-    //public float speed = 10f;
-    bool count;
-
-    void Start()
-    {
-        count = true;
-    }
+    bool count = true;
 
     void Update()
     {
@@ -26,7 +20,6 @@ public class TileMovement : MonoBehaviour
 
     IEnumerator floatup()
     {
-        //print("comefloatup");
         transform.Translate(0, 1 * Time.deltaTime, 0);
         yield return new WaitForSeconds(5);
         count = false;
@@ -34,7 +27,6 @@ public class TileMovement : MonoBehaviour
 
     IEnumerator floatdown()
     {
-        //print("comefloatdown");
         transform.Translate(0, -1 * Time.deltaTime, 0);
         yield return new WaitForSeconds(5);
         count = true;
