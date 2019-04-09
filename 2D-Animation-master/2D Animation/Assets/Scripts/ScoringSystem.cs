@@ -9,6 +9,7 @@ public class ScoringSystem : MonoBehaviour
     public GameObject scoreText;
     public static int theScore;
     public static int thelife;
+    public static string theStatus = "Welcome !";
     
     void Update()
     {
@@ -18,26 +19,26 @@ public class ScoringSystem : MonoBehaviour
         }
         else
         {
-            scoreText.GetComponent<Text>().text = "Game Over. Restart in 3 second";
-            GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
-            GameObject.Find("Player").GetComponent<Animator>().enabled = false;
-            StartCoroutine(restore());
+            theStatus = "You Lose";
+            initiallizeAll();
+            SceneManager.LoadScene(0);
         }
+
 
         if (CollectStar.total == 73)
         {
             scoreText.GetComponent<Text>().text = "Congratulation. You Win.";
             GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+            theStatus = "Congratulation";
+            initiallizeAll();
+            SceneManager.LoadScene(0);
         }
     }
 
-    IEnumerator restore()
+    public void initiallizeAll()
     {
-        yield return new WaitForSeconds(3);
         thelife = 0;
         theScore = 0;
         CollectStar.total = 0;
-
-        SceneManager.LoadScene("Main");
     }
 }

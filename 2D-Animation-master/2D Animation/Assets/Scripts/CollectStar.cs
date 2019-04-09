@@ -10,6 +10,7 @@ public class CollectStar : MonoBehaviour
     {
         if (theObjectName != gameObject.name)
         {
+            //collectSound = GetComponent<AudioSource>();
             //collectSound.Play();
             if (gameObject.name.Equals("cherry"))
             {
