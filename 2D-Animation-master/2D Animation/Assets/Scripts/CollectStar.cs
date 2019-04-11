@@ -10,6 +10,7 @@ public class CollectStar : MonoBehaviour
     {
         if (theObjectName != gameObject.name)
         {
+            FindObjectOfType<AudioManager>().Play("CollectDiamond");
             //collectSound = GetComponent<AudioSource>();
             //collectSound.Play();
             if (gameObject.name.Equals("cherry"))
@@ -34,6 +35,7 @@ public class CollectStar : MonoBehaviour
 
         while (ScoringSystem.theScore >= 10)
         {
+            FindObjectOfType<AudioManager>().Play("Life+1gf");
             ScoringSystem.theScore -= 10;
             ScoringSystem.thelife += 1;
         }

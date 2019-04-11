@@ -7566,8 +7566,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499100914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.38, y: -1.83, z: 0.1015625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.317, y: -2.3, z: 0.1015625}
+  m_LocalScale: {x: 0.98, y: 1.0719899, z: 1}
   m_Children: []
   m_Father: {fileID: 770454038}
   m_RootOrder: 3
@@ -7632,20 +7632,20 @@ CompositeCollider2D:
     m_ColliderPaths: []
   - m_Collider: {fileID: 499100918}
     m_ColliderPaths:
-    - - X: 5000000
-        Y: 5000000
-      - X: -5000000
-        Y: 5000000
-      - X: -5000000
-        Y: -5000000
-      - X: 5000000
-        Y: -5000000
+    - - X: 4900000
+        Y: 5359949
+      - X: -4900000
+        Y: 5359949
+      - X: -4900000
+        Y: -5359949
+      - X: 4900000
+        Y: -5359949
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.5, y: 0.5}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+    - - {x: 0.49, y: 0.5359949}
+      - {x: -0.49, y: 0.5359949}
+      - {x: -0.49, y: -0.5359949}
+      - {x: 0.49, y: -0.5359949}
   m_VertexDistance: 0.0005
 --- !u!50 &499100920
 Rigidbody2D:
@@ -9859,7 +9859,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 75ed86b440ed9d74cbe6026d7c5cd3e2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10151,8 +10151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974469549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6600037, y: -1.8455253, z: 0.1015625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.631, y: -2.3, z: 0.1015625}
+  m_LocalScale: {x: 0.98, y: 1.0719899, z: 1}
   m_Children: []
   m_Father: {fileID: 770454038}
   m_RootOrder: 0
@@ -10217,20 +10217,20 @@ CompositeCollider2D:
     m_ColliderPaths: []
   - m_Collider: {fileID: 974469553}
     m_ColliderPaths:
-    - - X: 5000000
-        Y: 5000000
-      - X: -5000000
-        Y: 5000000
-      - X: -5000000
-        Y: -5000000
-      - X: 5000000
-        Y: -5000000
+    - - X: 4900000
+        Y: 5359949
+      - X: -4900000
+        Y: 5359949
+      - X: -4900000
+        Y: -5359949
+      - X: 4900000
+        Y: -5359949
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.5, y: 0.5}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+    - - {x: 0.49, y: 0.5359949}
+      - {x: -0.49, y: 0.5359949}
+      - {x: -0.49, y: -0.5359949}
+      - {x: 0.49, y: -0.5359949}
   m_VertexDistance: 0.0005
 --- !u!50 &974469555
 Rigidbody2D:
@@ -11477,6 +11477,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1364933825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364933827}
+  - component: {fileID: 1364933826}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1364933826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364933825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772a1b58c39c6a04d90594ee68b669cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: CollectDiamond
+    clip: {fileID: 8300000, guid: 66a7145f4f217084fb75f848453bfbc3, type: 3}
+    source: {fileID: 0}
+  - name: Life+1
+    clip: {fileID: 8300000, guid: e005b82d1db150949834d3b228ddad47, type: 3}
+    source: {fileID: 0}
+--- !u!4 &1364933827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364933825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.696, y: 8.579167, z: -2.5899017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426291395
 GameObject:
   m_ObjectHideFlags: 0
@@ -13625,8 +13675,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788297301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.745743, y: -1.8299999, z: 0.1015625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.736, y: -2.3, z: 0.1015625}
+  m_LocalScale: {x: 0.98, y: 1.0719899, z: 1}
   m_Children: []
   m_Father: {fileID: 770454038}
   m_RootOrder: 2
@@ -13691,20 +13741,20 @@ CompositeCollider2D:
     m_ColliderPaths: []
   - m_Collider: {fileID: 1788297305}
     m_ColliderPaths:
-    - - X: 5000000
-        Y: 5000000
-      - X: -5000000
-        Y: 5000000
-      - X: -5000000
-        Y: -5000000
-      - X: 5000000
-        Y: -5000000
+    - - X: 4900000
+        Y: 5359949
+      - X: -4900000
+        Y: 5359949
+      - X: -4900000
+        Y: -5359949
+      - X: 4900000
+        Y: -5359949
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.5, y: 0.5}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+    - - {x: 0.49, y: 0.5359949}
+      - {x: -0.49, y: 0.5359949}
+      - {x: -0.49, y: -0.5359949}
+      - {x: 0.49, y: -0.5359949}
   m_VertexDistance: 0.0005
 --- !u!50 &1788297307
 Rigidbody2D:
@@ -16945,8 +16995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096756590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.470001, y: -1.8442726, z: 0.1015625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.425, y: -2.3, z: 0.1015625}
+  m_LocalScale: {x: 0.98, y: 1.0719899, z: 1}
   m_Children: []
   m_Father: {fileID: 770454038}
   m_RootOrder: 1
@@ -17011,20 +17061,20 @@ CompositeCollider2D:
     m_ColliderPaths: []
   - m_Collider: {fileID: 2096756594}
     m_ColliderPaths:
-    - - X: 5000000
-        Y: 5000000
-      - X: -5000000
-        Y: 5000000
-      - X: -5000000
-        Y: -5000000
-      - X: 5000000
-        Y: -5000000
+    - - X: 4900000
+        Y: 5359949
+      - X: -4900000
+        Y: 5359949
+      - X: -4900000
+        Y: -5359949
+      - X: 4900000
+        Y: -5359949
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.5, y: 0.5}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+    - - {x: 0.49, y: 0.5359949}
+      - {x: -0.49, y: 0.5359949}
+      - {x: -0.49, y: -0.5359949}
+      - {x: 0.49, y: -0.5359949}
   m_VertexDistance: 0.0005
 --- !u!50 &2096756596
 Rigidbody2D:
