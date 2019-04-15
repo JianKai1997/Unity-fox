@@ -35,7 +35,7 @@ public class CollectStar : MonoBehaviour
 
         while (ScoringSystem.theScore >= 10)
         {
-            FindObjectOfType<AudioManager>().Play("Life+1gf");
+            FindObjectOfType<AudioManager>().Play("Life+1");
             ScoringSystem.theScore -= 10;
             ScoringSystem.thelife += 1;
         }
