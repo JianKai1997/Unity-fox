@@ -2,7 +2,6 @@
 
 public class CollectStar : MonoBehaviour
 {
-    //public AudioSource collectSound;
     public static int total;
     string theObjectName = ""; 
 

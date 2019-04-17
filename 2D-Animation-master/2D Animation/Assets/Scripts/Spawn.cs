@@ -12,7 +12,7 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-        if (CollectStar.total >= 23 && theBool == false)
+        if (CollectStar.total >= 23 && theBool == false && Crane.crankStatus == true)
         {
             Instantiate(prefabs[0], tempDiamond, Quaternion.identity);
             theBool = true;           

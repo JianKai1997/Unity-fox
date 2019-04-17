@@ -11,6 +11,11 @@ public class ScoringSystem : MonoBehaviour
     public static int thelife;
     public static string theStatus = "Welcome !";
     
+    void Start()
+    {
+        initiallizeAll();
+    }
+
     void Update()
     {
         if (thelife >= 0)
@@ -20,7 +25,6 @@ public class ScoringSystem : MonoBehaviour
         else
         {
             theStatus = "You Lose";
-            initiallizeAll();
             SceneManager.LoadScene(0);
         }
 
@@ -30,7 +34,6 @@ public class ScoringSystem : MonoBehaviour
             scoreText.GetComponent<Text>().text = "Congratulation. You Win.";
             GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
             theStatus = "Congratulation";
-            initiallizeAll();
             SceneManager.LoadScene(0);
         }
     }

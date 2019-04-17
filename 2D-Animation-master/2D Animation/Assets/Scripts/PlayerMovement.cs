@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //background music
+        FindObjectOfType<AudioManager>().Play("Background");
     }
 
 	// Update is called once per frame
@@ -29,16 +31,18 @@ public class PlayerMovement : MonoBehaviour {
 
         //jump + double jump
         if (rb.velocity.y == 0)
+        {
             onTheGround = true;
+        } 
         else
+        {
             onTheGround = false;
-
-        if (onTheGround)
-            allowDoubleJump = true;
+        }
 
 		if (Input.GetButtonDown("Jump") && onTheGround)
 		{
             jumping();
+            allowDoubleJump = true;
             jump = true;
 			animator.SetBool("IsJumping", true);
 		}

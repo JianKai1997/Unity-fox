@@ -21,6 +21,7 @@ public class FollowPlayer : MonoBehaviour
         //drop down die
         if (player.position.y <= -20.0)
         {
+            FindObjectOfType<AudioManager>().Play("Woah");
             player.position = new Vector3(-1.9f, 1.0f, 0.0f);
             ScoringSystem.thelife -= 1;
         }
