@@ -41,14 +41,14 @@ public class PauseMenu : MonoBehaviour
         {
             PauseUI.SetActive(true);
             FindObjectOfType<AudioManager>().Pause("Background");
-            Time.timeScale = 0f;
+            Time.timeScale = 0;
         }
 
         if (!paused)
         {
             PauseUI.SetActive(false);
             FindObjectOfType<AudioManager>().UnPause("Background");
-            Time.timeScale = 1f;
+            Time.timeScale = 1;
         }
     }
 }
