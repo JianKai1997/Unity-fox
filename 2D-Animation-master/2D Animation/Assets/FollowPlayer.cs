@@ -22,7 +22,7 @@ public class FollowPlayer : MonoBehaviour
         if (player.position.y <= -20.0)
         {
             FindObjectOfType<AudioManager>().Play("Woah");
-            player.position = new Vector3(-1.9f, 1.0f, 0.0f);
+            player.position = new Vector3(Checkpoint.a, Checkpoint.b, Checkpoint.c);
             ScoringSystem.thelife -= 1;
         }
     }
