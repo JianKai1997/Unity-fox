@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         //jump + double jump
-        if (rb.velocity.y == 0)
+        if (rb.velocity.y <= 0.0 && rb.velocity.y > -0.1)
         {
             onTheGround = true;
         } 

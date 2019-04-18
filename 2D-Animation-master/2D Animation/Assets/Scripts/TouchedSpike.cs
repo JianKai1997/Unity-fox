@@ -7,6 +7,7 @@ public class TouchedSpike : MonoBehaviour
     public Transform player;
     public static bool theBool = false;
 
+    //touched spike + enemy
     void OnTriggerEnter2D(Collider2D colliders)
     {
         if (colliders.name.Equals("Player") && theBool == false)

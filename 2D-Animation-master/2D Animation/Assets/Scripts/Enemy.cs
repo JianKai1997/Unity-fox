@@ -25,7 +25,8 @@ public class Enemy : MonoBehaviour
         Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
 
-        //If theres no ground, turn around. Or if I hit a wall, turn around
+        //If theres no ground, turn around. 
+        //If I hit a wall, turn around
         if (!isGrounded)
         {
             Vector3 currRot = myTrans.eulerAngles;
