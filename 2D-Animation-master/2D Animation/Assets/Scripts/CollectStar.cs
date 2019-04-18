@@ -29,7 +29,6 @@ public class CollectStar : MonoBehaviour
                 }
 
                 theObjectName = gameObject.name;
-                Destroy(gameObject);
             }
 
 
@@ -39,6 +38,9 @@ public class CollectStar : MonoBehaviour
                 ScoringSystem.theScore -= 10;
                 ScoringSystem.thelife += 1;
             }
+
+            Destroy(gameObject);
         }
+        
     }
 }

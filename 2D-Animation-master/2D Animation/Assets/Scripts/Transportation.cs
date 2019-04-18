@@ -8,6 +8,6 @@ public class Transportation : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D colliders)
     {
-        player.position = new Vector3(Checkpoint.a,Checkpoint.b,Checkpoint.c);
+        player.position = new Vector3(-1.9f, 1.0f, 0.0f);
     }
 }
